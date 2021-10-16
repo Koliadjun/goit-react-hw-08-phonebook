@@ -32,3 +32,11 @@ export async function logOutUser() {
 export async function refreshCurrUser() {
   await axios.get(`/users/logout`);
 }
+export const token = {
+  set(token) {
+    axios.defaults.headers.common.Authorization = `Bearer ${token}`;
+  },
+  unset() {
+    axios.defaults.headers.common.Authorization = '';
+  },
+};
