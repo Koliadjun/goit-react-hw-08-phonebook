@@ -18,19 +18,23 @@ export async function deleteContactById(contactId) {
 }
 
 export async function registerUser(formData) {
-  await axios.post(`/users/signup`, formData);
+  const { data } = await axios.post(`/users/signup`, formData);
+  return data;
 }
 
 export async function logInUser(formData) {
-  await axios.post(`/users/login`, formData);
+  const { data } = await axios.post(`/users/login`, formData);
+  return data;
 }
 
 export async function logOutUser() {
-  await axios.post(`/users/logout`);
+  const { data } = await axios.post(`/users/logout`);
+  return data;
 }
 
 export async function refreshCurrUser() {
-  await axios.get(`/users/logout`);
+  const { data } = await axios.get(`/users/current`);
+  return data;
 }
 export const token = {
   set(token) {
