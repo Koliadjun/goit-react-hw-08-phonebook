@@ -1,7 +1,7 @@
 import './App.css';
 import React from 'react';
 
-import NavBar from 'components/NavigationLink/NavigationLink';
+import NavBar from 'components/NavBar/NavBar';
 import { Switch, Route } from 'react-router-dom';
 import MainView from 'view/MainView/MainView';
 import ContactsView from 'view/ContactsView/ContactsView';
