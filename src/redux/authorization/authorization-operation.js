@@ -31,6 +31,13 @@ const logoutUser = createAsyncThunk(
             return response
         } catch (error) {
             thunkAPI.rejectWithValue(error)
+            Toastify({
+                text: `${error.message} `,
+                duration: 4000,
+                style: {
+                    background: "#ff0000",
+                }
+            }).showToast();
         }
     }
 )
@@ -43,6 +50,13 @@ const registerUser = createAsyncThunk(
             return response
         } catch (error) {
             thunkAPI.rejectWithValue(error)
+            Toastify({
+                text: `${error.message} `,
+                duration: 4000,
+                style: {
+                    background: "#ff0000",
+                }
+            }).showToast();
         }
     }
 )
@@ -60,6 +74,13 @@ const refreshUser = createAsyncThunk(
             return response
         } catch (error) {
             thunkAPI.rejectWithValue(error)
+            Toastify({
+                text: `${error.message} `,
+                duration: 4000,
+                style: {
+                    background: "#ff0000",
+                }
+            }).showToast();
         }
     }
 )
