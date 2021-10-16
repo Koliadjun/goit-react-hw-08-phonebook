@@ -1,9 +1,10 @@
 import React from 'react';
+import RegisterForm from 'components/RegisterForm/RegisterForm';
 
 export default function RegisterView() {
   return (
     <section>
-      <h1>Register</h1>
+      <RegisterForm />
     </section>
   );
 }
