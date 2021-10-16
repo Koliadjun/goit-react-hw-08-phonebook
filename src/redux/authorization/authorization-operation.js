@@ -1,6 +1,7 @@
 import { createAsyncThunk } from '@reduxjs/toolkit'
 
 import * as contactsAPI from 'services/phonebookAPI'
+import Toastify from 'toastify-js'
 
 const loginUser = createAsyncThunk(
     'auth/loginUser',
@@ -11,6 +12,13 @@ const loginUser = createAsyncThunk(
             return response
         } catch (error) {
             thunkAPI.rejectWithValue(error)
+            Toastify({
+                text: `${error.message} `,
+                duration: 4000,
+                style: {
+                    background: "#ff0000",
+                }
+            }).showToast();
         }
     }
 )
