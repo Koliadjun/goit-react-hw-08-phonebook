@@ -1,4 +1,3 @@
-// import * as contactsAction from "./phonebook-action";
 import * as contactsAPI from 'services/phonebookAPI';
 
 import { createAsyncThunk } from '@reduxjs/toolkit';
