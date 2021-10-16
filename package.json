@@ -21,6 +21,7 @@
     "redux-devtools-extension": "^2.13.9",
     "redux-persist": "^6.0.0",
     "shortid": "^2.2.16",
+    "toastify-js": "^1.11.2",
     "web-vitals": "^1.1.2"
   },
   "scripts": {

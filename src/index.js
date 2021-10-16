@@ -9,6 +9,7 @@ import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react'
 import { BrowserRouter } from 'react-router-dom';
 import 'modern-normalize/modern-normalize.css';
+import "toastify-js/src/toastify.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 ReactDOM.render(
   <React.StrictMode>
