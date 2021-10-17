@@ -11,7 +11,6 @@ const loginUser = createAsyncThunk(
             contactsAPI.token.set(response.token);
             return response
         } catch (error) {
-            thunkAPI.rejectWithValue(error)
             Toastify({
                 text: `${error.message} `,
                 duration: 4000,
@@ -19,6 +18,7 @@ const loginUser = createAsyncThunk(
                     background: "#ff0000",
                 }
             }).showToast();
+            return thunkAPI.rejectWithValue(error)
         }
     }
 )
@@ -30,7 +30,6 @@ const logoutUser = createAsyncThunk(
             contactsAPI.token.unset()
             return response
         } catch (error) {
-            thunkAPI.rejectWithValue(error)
             Toastify({
                 text: `${error.message} `,
                 duration: 4000,
@@ -38,6 +37,7 @@ const logoutUser = createAsyncThunk(
                     background: "#ff0000",
                 }
             }).showToast();
+            return thunkAPI.rejectWithValue(error)
         }
     }
 )
@@ -49,7 +49,6 @@ const registerUser = createAsyncThunk(
             contactsAPI.token.set(response.token);
             return response
         } catch (error) {
-            thunkAPI.rejectWithValue(error)
             Toastify({
                 text: `${error.message} `,
                 duration: 4000,
@@ -57,6 +56,7 @@ const registerUser = createAsyncThunk(
                     background: "#ff0000",
                 }
             }).showToast();
+            return thunkAPI.rejectWithValue(error)
         }
     }
 )
@@ -73,7 +73,6 @@ const refreshUser = createAsyncThunk(
             const response = await contactsAPI.refreshCurrUser()
             return response
         } catch (error) {
-            thunkAPI.rejectWithValue(error)
             Toastify({
                 text: `${error.message} `,
                 duration: 4000,
@@ -81,6 +80,7 @@ const refreshUser = createAsyncThunk(
                     background: "#ff0000",
                 }
             }).showToast();
+            return thunkAPI.rejectWithValue(error)
         }
     }
 )
