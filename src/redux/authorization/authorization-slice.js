@@ -37,15 +37,19 @@ const authSlice = createSlice({
         },
         [authOperations.loginUser.rejected](state, { payload }) {
             state.error = payload;
+            state.isFetchingCurrUser = false;
         },
         [authOperations.registerUser.rejected](state, { payload }) {
             state.error = payload;
+            state.isFetchingCurrUser = false;
         },
         [authOperations.refreshUser.rejected](state, { payload }) {
             state.error = payload;
+            state.isFetchingCurrUser = false;
         },
         [authOperations.logoutUser.rejected](state, { payload }) {
             state.error = payload;
+            state.isFetchingCurrUser = false;
         },
 
     }
